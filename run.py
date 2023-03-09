@@ -59,4 +59,25 @@ def start_game():
     computer_cards_str = ' '.join(computer_cards)
 
     print(f"You got {player_cards_str} cards\n Computer got {computer_cards_str}")
-    return player_cards_str, computer_cards_str  
+    return player_cards_str, computer_cards_str
+
+
+def more_cards_choice():
+    """
+    This function gives the player a choice to get one more card or wants to stay
+    """
+    player_cards = []
+    computer_cards = []
+    while True:
+        print("------------------------")
+        choice = input(f"Do you want one more card?\n Press Y if you want one more or N if not. ")
+        if choice == "y":
+            player_hand.append(deck_of_cards.pop(0))
+            computer_hand.append(deck_of_cards.pop(0))
+            player_cards = [f"{card[1]}{card[0]}" for card in player_hand]
+            computer_cards = [f"{card[1]}{card[0]}" for card in computer_hand]
+            return True
+        elif choice == "n":
+            return False
+    player_cards_str = ' '.join(player_cards)
+    computer_cards_str = ' '.join(computer_cards)
