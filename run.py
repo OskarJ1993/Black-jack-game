@@ -81,3 +81,58 @@ def more_cards_choice():
             return False
     player_cards_str = ' '.join(player_cards)
     computer_cards_str = ' '.join(computer_cards)
+
+
+def who_wins():
+    """
+    Who wins function that convert every card to a number and decides who wins.
+    """
+    card_values = {
+        "Ace": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "Jack": 10,
+        "queen": 10,
+        "King": 10,
+        "\u2663": 0,
+        "\u2660": 0,
+        "\u2666": 0,
+        "\u2665": 0,
+    }
+
+
+    player_total = 0
+    for card in player_hand:
+        card_value = card_values[card[0]]
+        player_total += card_value
+
+    computer_total = 0
+    for card in computer_hand:
+        card_value = card_values[card[0]]
+        computer_total += card_value
+
+    if player_total == 21:
+        print(f"BlackJack!! {player_name} wins")
+        print("------------------------")
+    elif computer_total == 21:
+        print("Sorry, the Computer got BlackJack!")
+        print("------------------------")
+    elif player_total <= 20 and computer_total >= 20:
+        print(f"You Win {player_name}!")
+        print("------------------------")
+    elif player_total >= 20 and computer_total <= 20:
+        print("Sorry you lost.")
+        print("------------------------")
+    elif player_total == computer_total and player_total <= 21:
+        print("Its a draw!")
+        print("------------------------")
+    elif player_total and computer_total > 21:
+        print("Both Lose!")
+        print("------------------------")
