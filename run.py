@@ -136,3 +136,14 @@ def who_wins():
     elif player_total and computer_total > 21:
         print("Both Lose!")
         print("------------------------")
+
+
+def restart_game():
+    """
+    Simple restart function after the game is done.
+    """
+    restart = input("Do you want to play agian? press y")
+    if restart == "y":
+        main()
+    else:
+        sys.exit("You exited the game")
