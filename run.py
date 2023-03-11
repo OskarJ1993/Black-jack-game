@@ -19,6 +19,26 @@ cards_value = [
     "King",
 ]
 
+card_values = {
+    "Ace": 1,
+    "2": 2,
+    "3": 3,
+    "4": 4,
+    "5": 5,
+    "6": 6,
+    "7": 7,
+    "8": 8,
+    "9": 9,
+    "10": 10,
+    "Jack": 10,
+    "queen": 10,
+    "King": 10,
+    "\u2663": 0,
+    "\u2660": 0,
+    "\u2666": 0,
+    "\u2665": 0,
+    }
+
 cards_suits = ("\u2663", "\u2660", "\u2666", "\u2665")
 
 deck_of_cards = []
@@ -83,29 +103,13 @@ def more_cards_choice():
     computer_cards_str = ' '.join(computer_cards)
 
 
+
+
+
 def who_wins():
     """
     Who wins function that convert every card to a number and decides who wins.
     """
-    card_values = {
-        "Ace": 1,
-        "2": 2,
-        "3": 3,
-        "4": 4,
-        "5": 5,
-        "6": 6,
-        "7": 7,
-        "8": 8,
-        "9": 9,
-        "10": 10,
-        "Jack": 10,
-        "queen": 10,
-        "King": 10,
-        "\u2663": 0,
-        "\u2660": 0,
-        "\u2666": 0,
-        "\u2665": 0,
-    }
 
 
     player_total = 0
@@ -117,6 +121,9 @@ def who_wins():
     for card in computer_hand:
         card_value = card_values[card[0]]
         computer_total += card_value
+
+    print(player_total)
+    print(computer_total)
 
     if player_total == 21:
         print(f"BlackJack!! {player_name} wins")
@@ -147,3 +154,21 @@ def restart_game():
         main()
     else:
         sys.exit("You exited the game")
+
+
+
+def main():
+    shuffle_cards()
+    start_game()
+    while more_cards_choice():
+        print(f"{player_name} got {player_hand} cards\n Computer got {computer_hand}")
+    print("------------------------")
+    who_wins()
+    print("------------------------")
+    restart_game()
+
+
+print(f"Welcome to Blackjack!\n-------------------------")
+player_name = input("Enter your name: ")
+print("------------------------")
+main()
