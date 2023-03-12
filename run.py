@@ -44,10 +44,12 @@ computer_total = 0
 player_total = 0
 player_name = ""
 
+
 def shuffle_cards():
     """
     Function that shuffle cards to deck_of_cards randomly.
     """
+
     for suits in cards_suits:
         for value in cards_value:
             card = (suits, value)
@@ -55,9 +57,11 @@ def shuffle_cards():
     random.shuffle(deck_of_cards)
     return deck_of_cards
 
+
 def start_game():
     """
-    Start game function that gives player and computer 2 random cards each to begin with.
+    Start game function that gives player and computer
+    2 random cards each to begin with.
     """
     player_hand.clear()
     computer_hand.clear()
@@ -76,33 +80,38 @@ def start_game():
         computer_cards.append(card_string)
     computer_cards_str = ' '.join(computer_cards)
 
-    print(f"You got {player_cards_str} cards\n Computer got {computer_cards_str}")
+    print(f"""You got {player_cards_str} cards\n
+Computer got {computer_cards_str}""")
     return player_cards_str, computer_cards_str
 
 
 def more_cards_choice():
     """
-    This function gives the player a choice to get one more card or wants to stay
+    This function gives the player a choice to get one more card
+    or wants to stay
     """
     global player_total
     global computer_total
-    
+
     while True:
         print("------------------------")
-        choice = input(f"Do you want one more card?\n Press Y if you want one more or N if not. ")
+        choice = input(f"""HIT or STAND?\n
+Press Y if you want to HIT or N to STAND: """)
         try:
             if choice.lower() == "y":
                 player_hand.append(deck_of_cards.pop(0))
             player_cards = [f"{card[1]}{card[0]}" for card in player_hand]
             if player_total > 21:
-                print(f"{player_name} got {player_cards} cards\n Computer wins as {player_name} exceeded 21")
+                print(f"""{player_name} got {player_cards}\n 
+            Computer wins as {player_name} exceeded 21""")
                 return False
             if computer_total < 12:
                 computer_hand.append(deck_of_cards.pop(0))
             computer_cards = [f"{card[1]}{card[0]}" for card in computer_hand]
             computer_cards_string = " ".join(computer_cards)
             if choice.lower() == "y":
-                print(f" {player_name} got {player_cards} cards\n Computer got {computer_cards_string}")
+                print(f""" {player_name} got {player_cards}\n
+Computer got {computer_cards_string}""")
                 continue
             elif choice.lower() == "n":
                 return False
@@ -111,14 +120,6 @@ def more_cards_choice():
         except ValueError as e:
             print(e)
             continue
-
-
-
-
-
-
-
-
 
 
 def who_wins():
@@ -166,7 +167,8 @@ def who_wins():
     elif player_total < computer_total and computer_total <= 21:
         print("Sorry you lost.")
         print("------------------------")
-
+    elif player_total and computer_total > 21:
+        print("No one wins!")
 
 
 def restart_game():
@@ -180,21 +182,24 @@ def restart_game():
         computer_total = 0
         player_total = 0
         main()
-    else:
+    elif restart == "n":
         sys.exit("You exited the game")
-
+    else:
+        print("You entered invalid input try agian!")
+        restart_game()
 
 
 def main():
     shuffle_cards()
     start_game()
-    while more_cards_choice():
-        print(f"{player_name} got {player_hand} cards\n Computer got {computer_hand}")
     print("------------------------")
+    while more_cards_choice():
+        print(f"""{player_name} got {player_hand} cards\n
+        Computer got {computer_hand}""")
+        print("------------------------")
     who_wins()
     print("------------------------")
     restart_game()
-
 
 
 print("Welcome to the game of Blackjack!")
@@ -209,4 +214,5 @@ print("|         A|       |         K|     ")
 print("|__________|       |__________|     \n")
 player_name = input("Please enter your name: ")
 print("------------------------")
+
 main()
