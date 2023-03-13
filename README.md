@@ -81,3 +81,105 @@ Giving it a scoreboard would keep track how many times the user/computer have wo
 
 
 
+## Wireframe
+
+Here is the completet wireframe for the project.
+
+Made with lucidchart.
+
+
+<img src="readmeimg/wireframeimg.png" alt="wirefram image">
+
+
+
+## Techonologies used
+
+Throghout the projects was following technologies used:
+
+- Python3
+
+- [Github](https://github.com/)
+
+- Git 
+To push my project through to github.
+
+- [Heroku](https://heroku.com/)
+To deploy my project so it can be used live.
+
+- [Lucidchart](https://lucid.app/)
+To make projects wireframe.
+
+- [CI Python Linter](https://pep8ci.herokuapp.com/#)
+To look at any errors in project code.
+
+
+## Testing
+
+Testing has been done every step in the development process.
+
+### Known bugs and bug fixes
+
+- Sometimes when user press HIT and computer have a value of more than 12 it should not take more cards but it does.
+
+Fix:
+
+
+
+- When user takes a new card it shows up like a list in the terminal.
+
+Fix:
+
+
+## Linter Python Testing
+
+The Code institutes own [Python Linter tester](https://pep8ci.herokuapp.com/#) was used to test the code at the end of the project. At first it came back with minor blank space errors. Everything was fixed and no error has been found.
+
+<img src="readmeimg/lintertesting." alt="lintertesting image">
+
+
+
+## Deployment
+
+
+This project was deployed using following steps:
+
+1. Login to Heroku
+
+2. Locate the "New" button on Heroku dashboard, towards the top right corner, and select "Create new app".
+
+3. Choose an available name for the app, provide your region and click "Create App"
+
+4. Navigate to app settings tab and add two buildpack scripts in the following order,
+
+ - Python
+ - Nodejs
+
+5. Navigate to deployment tab.
+
+6. Under "Deployment method", choose "connect through GitHub" and confirm by clicking the "Connect to GitHub" button.
+
+7. Provide your repository name and click "Search" (If you can't find your repository, check that you've spelled it correctly).
+
+8. Choose and connect the correct repository for the app by clicking the "Connect" button shown beside the repository.
+
+9. Under "Automatic deploys", click the "Enable Automatic Deploys" button.
+
+10. Under "Manual deploy", select the main branch and click the "Deploy Bransh" button (The deployment can take a minute or two).
+
+11. A message will apear informing of a successfully deployment, followed by a link to your live site.
+
+
+
+### Credits
+
+Credits for this project is the following:
+
+- [Stack Overflow](https://stackoverflow.com)
+ Giving advice to improve thinking when applying it in code.
+
+- Evelina 
+ For helping me finding bugs in code.
+
+ - FreeCodeCamp youtube channel
+  Helping with fundamentals that I have issues understanding.
+ 
