@@ -1,31 +1,83 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# BlackJack
 
-Welcome USER_NAME,
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+[LIVE VERSION HERE]()
 
-## Reminders
+This is a simple command-line version of the game BlackJack. The game is built only in python and designed to be played in the terminal.
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+## Rules
 
-## Creating the Heroku app
+The game follows the standard rules of Blackjack. The objective is to have a hand with a higher value than the dealer's, without going over 21.
+Face cards (Jacks, Queens, and Kings) are worth 10 points, Aces are worth either 1 or 11 points (depending on which value would be more beneficial for the hand), 
+and all other cards are worth their face value.
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+Each player starts with two cards, and can choose to "hit" (draw another card) or "stand" (keep their current hand). The dealer also draws cards, and must continue to hit until their hand is worth at least 17 points.
 
-1. `heroku/python`
-2. `heroku/nodejs`
+If a player's hand exceeds 21 points, they lose. If the dealer's hand exceeds 21 points, all remaining players win. 
+If the dealer's hand is worth more than a player's, but not more than 21, that player loses. If a player's hand is worth more than the dealer's, 
+they win. If a player's hand is worth the same as the dealer's, it is a tie.
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
 
-Connect your GitHub repository and deploy as normal.
+## Features
 
-## Constraints
+### Welcome screen
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+Welcome screen introduces the user to the game and askes the user to enter their name.
 
------
-Happy coding!
+<img src="readmeimg/welcomescreen.png" alt="Image showing landing page">
+
+### Game start
+
+When name is provided, dealer gives two cards to the user and the computer.
+The card deck is randomly shuffled after eiche move in the game so it allways be random cards.
+Now you have a choice of either HIT (taking a new card) or STAND.
+
+<img src="readmeimg/gamestarts.png" alt="start screen image">
+
+
+### HIT OR STAND
+
+If the user wants to hit for a new card then dealer gives out a new random card from deck.
+User is going to be asked for a new card until the user dont want more cards.
+Computer should only take a new card if a certein creteria is met. 
+
+
+<img src="readmeimg/newcard.png" alt="new card image">
+
+
+
+### The Winner
+
+The winner of the game is based on who is closest to 21 BUT now over 21. See the rules of the game at top of this page.
+
+Now the the total of the users cards value is showing and who wins.
+
+If both the players goes over 21 both lose.
+
+<img src="readmeimg/winnerimg.png" alt="new card image">
+
+### Continue or Exit
+
+The prompt for playing agian shows up, the user is going to have to either press Y to play agian,
+or N for exiting the game. The user cant press any other key, it will continue to ask until the user
+provides with the right key. 
+
+<img src="readmeimg/playagianimg.png" alt="new card image">
+
+
+
+## Future Features
+
+### Better opponent
+
+The computer is set to just take a card based on just one crateria, to have a better opponent who is based on more then just one crateria,
+would make the computer smarter and gives it more a fair opponent to play agianst.
+
+
+### Scoreboard
+
+Giving it a scoreboard would keep track how many times the user/computer have won.
+
+
+
