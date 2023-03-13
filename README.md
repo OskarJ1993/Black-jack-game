@@ -134,7 +134,7 @@ Fix:
 
 The Code institutes own [Python Linter tester](https://pep8ci.herokuapp.com/#) was used to test the code at the end of the project. At first it came back with minor blank space errors. Everything was fixed and no error has been found.
 
-<img src="readmeimg/lintertesting." alt="lintertesting image">
+<img src="readmeimg/lintertesting.png" alt="lintertesting image">
 
 
 
