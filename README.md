@@ -8,12 +8,12 @@ This is a simple command-line version of the game BlackJack. The game is built o
 ## Rules
 
 The game follows the standard rules of Blackjack. The objective is to have a hand with a higher value than the dealer's, without going over 21.
-Face cards (Jacks, Queens, and Kings) are worth 10 points, Aces are worth either 1 or 11 points (depending on which value would be more beneficial for the hand), 
+Face cards are worth 10 points, Aces are worth 1 point, 
 and all other cards are worth their face value.
 
-Each player starts with two cards, and can choose to "hit" (draw another card) or "stand" (keep their current hand). The dealer also draws cards, and must continue to hit until their hand is worth at least 17 points.
+Each player starts with two cards, and can choose to "hit" (draw another card) or "stand" (keep their current hand). The dealer also draws cards, and must continue to hit until their hand is worth at least 12 points.
 
-If a player's hand exceeds 21 points, they lose. If the dealer's hand exceeds 21 points, all remaining players win. 
+If a player's hand exceeds 21 points, they lose. If the dealer's hand exceeds 21 points, the player win. 
 If the dealer's hand is worth more than a player's, but not more than 21, that player loses. If a player's hand is worth more than the dealer's, 
 they win. If a player's hand is worth the same as the dealer's, it is a tie.
 
@@ -23,14 +23,14 @@ they win. If a player's hand is worth the same as the dealer's, it is a tie.
 
 ### Welcome screen
 
-Welcome screen introduces the user to the game and askes the user to enter their name.
+Welcome screen introduces the user to the game and asks the user to enter their name.
 
 <img src="readmeimg/welcomescreen.png" alt="Image showing landing page">
 
 ### Game start
 
 When name is provided, dealer gives two cards to the user and the computer.
-The card deck is randomly shuffled after eiche move in the game so it allways be random cards.
+The card deck is randomly shuffled after each move in the game so it allways be random cards.
 Now you have a choice of either HIT (taking a new card) or STAND.
 
 <img src="readmeimg/gamestarts.png" alt="start screen image">
@@ -51,7 +51,7 @@ Computer should only take a new card if a certein creteria is met.
 
 The winner of the game is based on who is closest to 21 BUT now over 21. See the rules of the game at top of this page.
 
-Now the the total of the users cards value is showing and who wins.
+Now the the total of the users cards value is showing up and declers a winner.
 
 If both the players goes over 21 both lose.
 
@@ -59,7 +59,7 @@ If both the players goes over 21 both lose.
 
 ### Continue or Exit
 
-The prompt for playing agian shows up, the user is going to have to either press Y to play agian,
+The prompt for playing agian shows up, the user is going to have to either press Y to play again,
 or N for exiting the game. The user cant press any other key, it will continue to ask until the user
 provides with the right key. 
 
@@ -71,7 +71,7 @@ provides with the right key.
 
 ### Better opponent
 
-The computer is set to just take a card based on just one crateria, to have a better opponent who is based on more then just one crateria,
+The computer is set to just take a card based on just one criteria, to have a better opponent who is based on more then just one crateria,
 would make the computer smarter and gives it more a fair opponent to play agianst.
 
 
@@ -94,7 +94,7 @@ Made with lucidchart.
 
 ## Techonologies used
 
-Throghout the projects was following technologies used:
+Throughout the projects was following technologies used:
 
 - Python3
 
@@ -170,7 +170,7 @@ This project was deployed using following steps:
 
 
 
-### Credits
+## Credits
 
 Credits for this project is the following:
 
