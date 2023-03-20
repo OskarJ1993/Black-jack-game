@@ -132,14 +132,6 @@ Testing has been done every step in the development process.
 
 
 
-
-- When user takes a new card it shows up like a array in the terminal.
-
-Fix:
- 
- Fixed using a for loop in get more cards function.
-
-
 ## Linter Python Testing
 
 The Code institutes own [Python Linter tester](https://pep8ci.herokuapp.com/#) was used to test the code at the end of the project. At first it came back with minor blank space errors. Everything was fixed and no error has been found.
