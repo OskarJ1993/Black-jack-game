@@ -1,6 +1,6 @@
 import random
-import keyboard
 import sys
+import re
 
 
 cards_value = [
@@ -171,6 +171,18 @@ def who_wins():
         print("No one wins!")
 
 
+
+def enter_name():
+    global player_name
+    player_name = input("Please enter your name: ")
+    if re.match("^[a-zA-Z- ']+$", player_name):
+        return player_name
+    else:
+        print("Invalid input. Please enter a valid name.")
+        return enter_name()
+
+
+
 def restart_game():
     """
     Simple restart function after the game is done.
@@ -190,6 +202,7 @@ def restart_game():
 
 
 def main():
+    enter_name()
     shuffle_cards()
     start_game()
     print("------------------------")
@@ -212,7 +225,7 @@ print("|          |       |          |     ")
 print("|        ♡ |       |        ♣ |     ")
 print("|         A|       |         K|     ")
 print("|__________|       |__________|     \n")
-player_name = input("Please enter your name: ")
 print("------------------------")
 
 main()
+
