@@ -100,7 +100,9 @@ Press Y if you want to HIT or N to STAND: """)
         try:
             if choice.lower() == "y":
                 player_hand.append(deck_of_cards.pop(0))
-            player_cards = [f"{card[1]}{card[0]}" for card in player_hand]
+                player_cards = ""
+                for card in player_hand:
+                    player_cards += f"{card[1]}{card[0]} "
             if player_total > 21:
                 print(f"""{player_name} got {player_cards}\n 
             Computer wins as {player_name} exceeded 21""")
@@ -120,6 +122,7 @@ Computer got {computer_cards_string}""")
         except ValueError as e:
             print(e)
             continue
+
 
 
 def who_wins():
@@ -171,6 +174,7 @@ def who_wins():
         print("No one wins!")
 
 
+import re
 
 def enter_name():
     global player_name
@@ -228,4 +232,3 @@ print("|__________|       |__________|     \n")
 print("------------------------")
 
 main()
-
