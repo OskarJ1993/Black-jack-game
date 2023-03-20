@@ -104,7 +104,7 @@ Press Y if you want to HIT or N to STAND: """)
                 for card in player_hand:
                     player_cards += f"{card[1]}{card[0]} "
             if player_total > 21:
-                print(f"""{player_name} got {player_cards}\n 
+                print(f"""{player_name} got {player_cards}\n
             Computer wins as {player_name} exceeded 21""")
                 return False
             if computer_total < 12:
@@ -122,7 +122,6 @@ Computer got {computer_cards_string}""")
         except ValueError as e:
             print(e)
             continue
-
 
 
 def who_wins():
@@ -174,8 +173,6 @@ def who_wins():
         print("No one wins!")
 
 
-import re
-
 def enter_name():
     global player_name
     player_name = input("Please enter your name: ")
@@ -184,7 +181,6 @@ def enter_name():
     else:
         print("Invalid input. Please enter a valid name.")
         return enter_name()
-
 
 
 def restart_game():
