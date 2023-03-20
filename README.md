@@ -1,5 +1,6 @@
 # BlackJack
 
+<img src="readmeimg/wireframeimg.png" alt="wirefram image">
 
 [LIVE VERSION HERE]()
 
@@ -117,7 +118,11 @@ To look at any errors in project code.
 
 Testing has been done every step in the development process.
 
-That input has validation works and the input is valid.
+- Inputs working
+
+- Validation working
+
+- Functions working 
 
 
 
