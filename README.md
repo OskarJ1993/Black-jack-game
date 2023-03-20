@@ -96,11 +96,11 @@ Made with lucidchart.
 
 Throughout the projects was following technologies used:
 
-- Python3
+- [Python](https://www.python.org)
 
 - [Github](https://github.com/)
 
-- Git 
+- [Git](https://git-scm.com)
 To push my project through to github.
 
 - [Heroku](https://heroku.com/)
@@ -117,17 +117,22 @@ To look at any errors in project code.
 
 Testing has been done every step in the development process.
 
+That input has validation works and the input is valid.
+
+
+
 ### Known bugs and bug fixes
 
 - Sometimes when user press HIT and computer have a value of more than 12 it should not take more cards but it does.
 
+
+
+
+- When user takes a new card it shows up like a array in the terminal.
+
 Fix:
-
-
-
-- When user takes a new card it shows up like a list in the terminal.
-
-Fix:
+ 
+ Fixed using a for loop in get more cards function.
 
 
 ## Linter Python Testing
