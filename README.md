@@ -1,6 +1,6 @@
 # BlackJack
 
-<img src="readmeimg/wireframeimg.png" alt="wirefram image">
+<img src="readmeimg/startlogo.png" alt="start-logo">
 
 [LIVE VERSION HERE]()
 

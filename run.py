@@ -216,6 +216,7 @@ def main():
 
 
 print("Welcome to the game of Blackjack!")
+print("------------------------")
 print(" __________         __________      ")
 print("|A         |       |K         |     ")
 print("|♡         |       |♣         |     ")
