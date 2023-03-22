@@ -2,7 +2,7 @@
 
 <img src="readmeimg/startlogo.png" alt="start-logo">
 
-[LIVE VERSION HERE]()
+[LIVE VERSION HERE](https://blackjackgame.herokuapp.com)
 
 This is a simple command-line version of the game BlackJack. The game is built only in python and designed to be played in the terminal.
 

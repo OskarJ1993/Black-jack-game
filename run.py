@@ -103,18 +103,17 @@ Press Y if you want to HIT or N to STAND: """)
                 player_cards = ""
                 for card in player_hand:
                     player_cards += f"{card[1]}{card[0]} "
-            if player_total > 21:
-                print(f"""{player_name} got {player_cards}\n
+                print(f""" {player_name} got {player_cards}""")
+                if player_total > 21:
+                    print(f"""{player_name} got {player_cards}\n
             Computer wins as {player_name} exceeded 21""")
-                return False
-            if computer_total < 12:
-                computer_hand.append(deck_of_cards.pop(0))
-            computer_cards = [f"{card[1]}{card[0]}" for card in computer_hand]
-            computer_cards_string = " ".join(computer_cards)
-            if choice.lower() == "y":
+                    return False
+                if computer_total < 12:
+                    computer_hand.append(deck_of_cards.pop(0))
+                computer_cards = [f"{card[1]}{card[0]}" for card in computer_hand]
+                computer_cards_string = " ".join(computer_cards)
                 print(f""" {player_name} got {player_cards}\n
 Computer got {computer_cards_string}""")
-                continue
             elif choice.lower() == "n":
                 return False
             else:
@@ -122,6 +121,7 @@ Computer got {computer_cards_string}""")
         except ValueError as e:
             print(e)
             continue
+
 
 
 def who_wins():
